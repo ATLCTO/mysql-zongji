@@ -11,7 +11,7 @@ const ConnectionConfigMap = {
 const TableInfoQueryTemplate = 'SELECT ' +
   'COLUMN_NAME, COLLATION_NAME, CHARACTER_SET_NAME, ' +
   'COLUMN_COMMENT, COLUMN_TYPE ' +
-  'FROM information_schema.columns ' + "WHERE table_schema='%s' AND table_name='%s'";
+  'FROM information_schema.columns ' + "WHERE table_schema='%s' AND table_name='%s' ORDER BY ordinal_position;";
 
 function ZongJi(dsn) {
   EventEmitter.call(this);
